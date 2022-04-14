@@ -18,7 +18,7 @@ Seu objetivo é realizar o consumo desta API, seguindo o escopo abaixo:
 - Deve possuir um botão "Consultar" que após clicado, deverá executar a rotina de consulta de CEP e exibir na tela TODOS os dados retornados da consulta, como UF, Endereço, Bairro, etc...
 - Implementar tratamentos de erros e de time-out. Caso a API não responda em até 5 segundos, uma mensagem deverá ser retornada para o usuário que o serviço de CEP está indisponível no momento e que ele deverá tentar novamente mais tarde. 
 - Caso o usuário informe um CEP com formato ou conteúdo inválido o tratamento deverá ser realizado pela aplicação antes de realizar a consulta na API e a mensagem adequada exibida para o usuário.
-- A rotina de consulta de CEP deverá ser encapsulada em uma Classe TConsultaCEP, onde tudo que seja necessário para realizar o acesso a API esteja auto contido na classe de maneira que essa consulta de CEP possa ser utilizada numa outra tela ou até mesmo numa outra aplicação apenas instanciando a classe e chamando um método "ConsultarCEP(xxx)", que deverá encapsular o retorno dos dados também numa classe TRetornoCEP.
+- A rotina de consulta de CEP deverá ser encapsulada em uma Classe TConsultaCEP, onde tudo que seja necessário para realizar o acesso a API esteja auto contido na classe de maneira que essa consulta de CEP possa ser utilizada numa outra tela ou até mesmo numa outra aplicação apenas instanciando a classe e chamando um método "ConsultarCEP(xxx)", que deverá encapsular o retorno dos dados também numa classe. Ex: TRetornoCEP.
 
 
 ## O que será analisado:
@@ -38,12 +38,10 @@ Seu objetivo é realizar o consumo desta API, seguindo o escopo abaixo:
 
 ## O que não será analisado
 - Beleza da aplicação,Design gráfico de UI, uso de ícones, imagens,animações, etc... Apesar de ser importante, não é o foco deste exercício.
-- Coisas extras implementadas que não foram solicitadas. Exemplo, perder tempo com "Firulas" não solicitadas.  
+- Coisas extras implementadas que não foram solicitadas.
   
 ## Entrega
-o programa deverá ser entregue o executável, que deve abrir sem erros, o fonte zipado e os scripts para criar a base de dados. Após a entrega, o programa será analisado e 
-poderei solicitar alterações a fim de avaliar o entendimento do candidato referente ao que foi desenvolvido bem como avaliar como o candidato 
-Responde e recebe críticas ao seu trabalho.
+o programa deverá ser entregue o executável, que deve abrir sem erros, o fonte zipado. Após a entrega, o programa será analisado e poderei solicitar alterações a fim de avaliar o entendimento do candidato referente ao que foi desenvolvido bem como avaliar como o candidato Responde e recebe críticas ao seu trabalho.
 
 ## Prazo: 
 O prazo deverá ser calculado pelo candidato antes de iniciar o trabalho e informado.
