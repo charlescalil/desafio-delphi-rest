@@ -20,6 +20,15 @@ Seu objetivo é realizar o consumo desta API, seguindo o escopo abaixo:
 - Caso o usuário informe um CEP com formato ou conteúdo inválido o tratamento deverá ser realizado pela aplicação antes de realizar a consulta na API e a mensagem adequada exibida para o usuário.
 - A rotina de consulta de CEP deverá ser encapsulada em uma Classe TConsultaCEP, onde tudo que seja necessário para realizar o acesso a API esteja auto contido na classe de maneira que essa consulta de CEP possa ser utilizada numa outra tela ou até mesmo numa outra aplicação apenas instanciando a classe e chamando um método "ConsultarCEP(xxx)", que deverá encapsular o retorno dos dados também numa classe. Ex: TRetornoCEP.
 
+## Adicionais 
+
+Os adicionais não são obrigatórios, mas poderemos considerá-los para o processo de seleção, caso fiquemos em dúvida entre mais de um candidato, portanto, 
+é recomandado faze-los.
+
+- Adicional 1: Utilizar threads ou tasks para que a tela não fique trancada no momento da consulta
+- Adicional 2: Fazer um cache de ceps.  Quando o usuario consultar um cep, verificar se o cep ja não foi consultado antes e, caso tenha, retornar os dados do cache em vez de acessar novamente a api. Ao fechar a aplicação, o cache tem que ser persistido, ou seja, tem que ser gravado em disco em uma estrutura que seja eficiente para trabalhar com dezenas de milhares de ceps consultados. A busca do cep no cache tem que ser indexada e não pode demorar mais do que alguns poucos milisegundos para verificar se o cep já está em cache ou nao e retornar os dados do mesmo.
+- Adicional 3: Fazer um comando no programa para a cada X minutos (configurado no proprio aplicativo) consultar uma faixa de ceps (Ex: do 93336-999 ao 93336-999).. essa faixa tambem tem que ser configurada, acessar os ceps e salvar eles num arquivo csv.  Detalhes, cuidar para não dar erro de uso indevido da api (não fazer milhares de acessos em sequencia, colocar um intervalo de tempo). Essa busca deverá ser realizada de forma que não trave a tela (em thread ou task)... e cuidar para que os erros de acesso sejam tratados e salvos em arquivo de log (não pode subit erros na tela para o usuario).. quando a task tiver em execução, colocar um aviso em tela para o usuario de que a mesma está rodando... Colocar num status bar o tempo restante para a proxima execução
+
 
 ## O que será analisado:
 - Basicamente, o acabamento geral da aplicação (tratamento de erros, validações e usabilidade da aplicação)
